@@ -1,4 +1,4 @@
-h@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital@1&family=Poppins:ital,wght@0,400;0,500;0,600;1,200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital@1&family=Poppins:ital,wght@0,400;0,500;0,600;1,200&display=swap");
 
 /* styling whole document */
 * {
@@ -247,13 +247,11 @@ a:hover {
   margin-top: 20px;
 }
 
-<<<<<<< HEAD
 .right-side .photos img {
   width: 100px;
-=======
+}
 .right-side .photos img{
  width: 140px;
->>>>>>> 0f2bf883c9464decec95be8ec8b1a94eadf93a1d
   height: auto;
 }
 
@@ -297,11 +295,8 @@ a:hover {
   cursor: pointer;
   margin: 10px;
   max-width: 80%;
-<<<<<<< HEAD
   height: auto;
-=======
   height:auto;
->>>>>>> 0f2bf883c9464decec95be8ec8b1a94eadf93a1d
 }
 
 .popup-content .close {
@@ -330,11 +325,8 @@ a:hover {
 
   .left-side {
     width: 100%;
-<<<<<<< HEAD
     max-height: 400px;
-=======
     max-height: 350px;
->>>>>>> 0f2bf883c9464decec95be8ec8b1a94eadf93a1d
     color: rgb(255, 255, 255);
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -391,7 +383,4 @@ a:hover {
     width: 100%;
   }
 }
-<<<<<<< HEAD
 /* @ c - padam thapa    */
-=======
->>>>>>> 0f2bf883c9464decec95be8ec8b1a94eadf93a1d
