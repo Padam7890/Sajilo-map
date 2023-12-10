@@ -1,4 +1,7 @@
 
+
+
+// list of data that shown in webpage
 let arrayList = [
  
     {

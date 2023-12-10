@@ -1,19 +1,15 @@
-
 //import arraYlist from another js /arraylist.js
 import arrayList from "./arraylist.js";
 
-
-
-//get id from html view 
+//get id from html view
 const items = document.getElementById("main");
 const map = document.getElementById("map");
 const search = document.getElementById("search");
 const noData = document.getElementById("no-data");
 const tag = document.getElementById("tags");
-const details = document.getElementById("details")
+const details = document.getElementById("details");
 
-
-//all tag list 
+//all tag list
 function tagList() {
   const firstButton = document.createElement("button");
   firstButton.classList.add("unselected");
@@ -45,9 +41,7 @@ function tagList() {
   }
 }
 
-
-
-//call function tag ,showdata,detailsview
+//call function tag , showdata, detailsview
 tagList();
 showData(arrayList);
 detailsView(arrayList[0]);
@@ -56,7 +50,7 @@ detailsView(arrayList[0]);
 function showData(filteredItems) {
   let showDatas = "";
   filteredItems.forEach((element, index) => {
-      showDatas += `
+    showDatas += `
           <div class="border"></div>
           <div id="title_${index}" class="items">
               <div class="list">
@@ -76,17 +70,13 @@ function showData(filteredItems) {
 
   items.innerHTML = showDatas;
   filteredItems.forEach((element, index) => {
-      const titleElement = document.getElementById(`title_${index}`);
-      titleElement.addEventListener('click', () => 
-      {
-        MapView(element.Map);
-        detailsView(element);
-      }
-      );
+    const titleElement = document.getElementById(`title_${index}`);
+    titleElement.addEventListener("click", () => {
+      MapView(element.Map);
+      detailsView(element);
+    });
   });
 }
-
-
 
 //generate stars/rating based on arrayList
 function generateStars(rating) {
@@ -123,12 +113,11 @@ function MapView(mapUrl) {
   map.innerHTML = data;
 }
 
-
-//details view of each item 
+//details view of each item
 function detailsView(element) {
-details.innerHTML ="";
+  details.innerHTML = "";
 
-const data = `
+  const data = `
 <h3> Details  </h3>
 <div class="border"></div>
 
@@ -152,20 +141,23 @@ const data = `
 
 <div class="close">
   <i class="bx bxs-time"></i>
-  ${element.Status === "Close" ? ` <p class="status_close"> ${element.Status} </p>
+  ${
+    element.Status === "Close"
+      ? ` <p class="status_close"> ${element.Status} </p>
   |
   <span> Opening Time ${element.OpeningTime}
 
   </span>
    
-  ` : `<p class="status_open">${element.Status} </p>
+  `
+      : `<p class="status_open">${element.Status} </p>
   |
   <span> Closing Time ${element.ClosingTime}
 
   </span> 
   
   `
-}
+  }
   </p>
 </div>
 
@@ -187,11 +179,18 @@ const data = `
 <div class="title-photo"> 
 <p> Photos & videos </p></div>
 <div class="photos">
-  ${element.image ? 
-    element.image.map((image, index) => `
-      <img src="${image.src}" id="${image.src}"  alt="${image.src}+ ${index + 1}">
-    `).join('') 
-    : 'Photos & videos are Not available'
+  ${
+    element.image
+      ? element.image
+          .map(
+            (image, index) => `
+      <img src="${image.src}" id="${image.src}"  alt="${image.src}+ ${
+              index + 1
+            }">
+    `
+          )
+          .join("")
+      : "Photos & videos are Not available"
   }
 </div>
 <div id="imagePopup" class="popup">
@@ -200,36 +199,38 @@ const data = `
   <span id="close_popup" class="close">&times;</span>
 </div>
 </div>
-`
+`;
 
-details.innerHTML = data;
+  details.innerHTML = data;
 
-const share = document.getElementById("share_facebook");
-const direction = document.getElementById("direction");
+  const share = document.getElementById("share_facebook");
+  const direction = document.getElementById("direction");
 
-share.addEventListener("click",()=> shareFacebook(element.Share) )
-direction.addEventListener("click",()=> directions(element.Map) )
- 
- if (element.image) {
-  for (let index = 0; index < element.image.length; index++) {
-    const imageElement = document.getElementById(`${element.image[index].src}`);
-    if (imageElement) {
-      imageElement.addEventListener('click', () => openImagePopup(element.image[index].src));
+  share.addEventListener("click", () => shareFacebook(element.Share));
+  direction.addEventListener("click", () => directions(element.Map));
+
+  if (element.image) {
+    for (let index = 0; index < element.image.length; index++) {
+      const imageElement = document.getElementById(
+        `${element.image[index].src}`
+      );
+      if (imageElement) {
+        imageElement.addEventListener("click", () =>
+          openImagePopup(element.image[index].src)
+        );
+      }
     }
   }
- }
   closePopup();
 }
-
-
 
 //closepopup of image
 function closePopup() {
   const popups = document.getElementById("close_popup");
-popups.addEventListener("click", ()=>{
-  const popup = document.getElementById("imagePopup");
-  popup.style.display = "none";
-})
+  popups.addEventListener("click", () => {
+    const popup = document.getElementById("imagePopup");
+    popup.style.display = "none";
+  });
 }
 
 //openpopup of image
@@ -241,26 +242,20 @@ function openImagePopup(imageSrc) {
   popup.style.display = "block";
 }
 
-
-
 //share map to facebook
 function shareFacebook(Url) {
-  const mapUrl = Url
-  const shareLink = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(mapUrl)}`;
-  window.open(shareLink, '_blank');
+  const mapUrl = Url;
+  const shareLink = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+    mapUrl
+  )}`;
+  window.open(shareLink, "_blank");
 }
-
 
 //show full map
 function directions(Url) {
-  const mapUrl = Url
-  window.open(mapUrl, '_blank');
+  const mapUrl = Url;
+  window.open(mapUrl, "_blank");
 }
-
-
-
-
-
 
 //get search item from user by  input event
 search.addEventListener("input", searchFilter);
@@ -286,7 +281,6 @@ function searchFilter() {
   }
 }
 
-
 //filter data through button of taglist
 function filterAndShowData(selectedPointOfInterest, button) {
   const filteredItems = arrayList.filter(
@@ -298,11 +292,8 @@ function filterAndShowData(selectedPointOfInterest, button) {
     button.classList.add("selected");
     noData.style.display = "block";
     noData.innerHTML = "";
-
   }
-  
 }
-
 
 //resetbutton active colors
 function resetButtonColors() {
@@ -310,5 +301,4 @@ function resetButtonColors() {
   buttons.forEach((button) => button.classList.remove("selected"));
 }
 
-
-  // @ c - padam thapa   
+// @ c - padam thapa
