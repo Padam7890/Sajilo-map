@@ -1,24 +1,20 @@
-Sajilo Map - Easy and Clean Map
+"Sajilo Map - Easy and Clean Map
 
-Features for user
-a) Search , where users can search place name, Addresss name,rating, and point of intreset as well
+User Features:
+a) Search: Users can search for place names, addresses, ratings, and points of interest.
 
-b) Smooth collection of beautifull location  and places like movies, hotel, restaurant, Tourist area, shopping mall etc.
+b) Smooth Collection of Beautiful Locations: Discover and explore locations such as movies, hotels, restaurants, tourist areas, shopping malls, etc.
 
-c) tag lists of popular day to day task ,
+c) Tag Lists of Popular Day-to-Day Tasks.
 
-d) details of every location  
-   Showing full map 
-   sharing option to friends
-   opening or closing time /status
-   Phone number 
-   book anything by visiting website
-   photos and videos of each location 
-   
+d) Details of Every Location:
 
-e) responsive for mobile and tablet as well
-
-
-
+Displaying the full map.
+Sharing options with friends.
+Opening or closing time/status.
+Phone number.
+Booking is available through the website.
+Photos and videos for each location.
+e) Responsive Design: The application is designed to be responsive for both mobile and tablet devices."
 
 
