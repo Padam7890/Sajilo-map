@@ -1,0 +1,391 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital@1&family=Poppins:ital,wght@0,400;0,500;0,600;1,200&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f8ff;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 1450px;
+  display: flex;
+  background-color: white;
+  height: 700px;
+  margin-top: 40px;
+  border-radius: 10px;
+  box-shadow: 0.3px 0.4px 0.5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.left-side {
+  width: 30%;
+  max-height: 700px;
+  color: rgb(255, 255, 255);
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 7px;
+  overflow-x: auto;
+}
+
+.center-side{
+ width: 50%;
+}
+
+.right-side {
+  width: 25%;
+  margin-top: 20px;
+}
+
+iframe{
+  width: 100%;
+}
+
+.list {
+  background-color: white;
+  color: black;
+  display: inline-flex;
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 7px;
+  flex-direction: column;
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
+}
+
+.border {
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #ccc;
+}
+.list p {
+  font-size: 13px;
+  font-weight: 100;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.reviews {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.star {
+  color: #e7711b;
+  position: relative;
+  left: -16px;
+}
+
+.reviews .links{
+  color: #4186e2;
+}
+
+.search {
+  margin-top: 30px;
+  margin-left: 20px;
+  margin-bottom: 40px;
+}
+
+.search input {
+  height: 40px;
+  width: 90%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+
+.search input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+
+
+.no-data {
+  display: none;
+  color: black;
+  margin-left: 15px;
+}
+
+
+
+.tags{
+  display: flex;
+  margin-left: 17px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  gap: 10px;
+  overflow-x: auto;
+  cursor: pointer;
+  scrollbar-width: thin; 
+  scrollbar-color: transparent transparent;
+}
+
+
+
+.tags::-webkit-scrollbar{
+  width: 0;
+}
+.tags .unselected{
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 20px;
+  cursor: pointer;
+
+}
+
+.tags .selected{
+  background-color: #5A8E48;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 20px;
+  cursor: pointer;
+
+}
+
+.right-side .top-nav{
+  margin-left: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.right-side i {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  color: #619DE5;
+}
+
+.right-side h3{
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+
+
+.right-side .direction, .right-side .share{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+}
+
+.right-side .descrption{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-left: 10px;
+margin-top: 30px;
+margin-bottom: 10px;
+
+}
+
+.right-side .address, .right-side .contact, 
+.right-side .close{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+a:hover{
+  color: red;
+}
+
+
+.direction:hover ,.share:hover,  .contact:hover
+
+{
+ color: red;
+}
+
+.right-side .website{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-left: 10px;
+}
+
+
+.right-side .photos{
+
+  display: flex;
+  max-width: 600px;
+  flex-wrap: wrap;
+  gap: 10px;
+  text-align: center;
+  font-size: 15px;
+  margin-left: 20px;
+  color: #ccc;
+  margin-top: 20px;
+}
+
+.right-side .photos img{
+  width: 130px;
+  height: fit-content;
+}
+
+.right-side .title-photo p{
+margin-top: 20px;
+margin-left: 20px;
+}
+
+.status_open{
+  color: green;
+}
+
+.status_close{
+  color: red;
+}
+
+
+/* //popup content */
+
+
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.popup-content {
+  position: relative;
+  text-align: center;
+  margin: 5% auto;
+  padding: 20px;
+  background-color: #fefefe;
+  max-width: 700px;
+}
+
+.popup-content img {
+  cursor: pointer;
+  margin: 10px;
+  max-width: 80%;
+}
+
+.popup-content  .close {
+  position: absolute;
+  top: 5px;
+  right: 25px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+
+
+
+
+
+/* Media query for smaller screens (max-width: 768px) */
+@media screen and (max-width: 800px) {
+
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: fit-content;
+    margin-top: 40px;
+    border-radius: 10px;
+    box-shadow: 0.3px 0.4px 0.5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .left-side {
+    width: 100%;
+    max-height: 700px;
+    color: rgb(255, 255, 255);
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 7px;
+    overflow-x: auto;
+  }
+  
+  .center-side{
+   width: 100%;
+  }
+
+  iframe{
+    width: 100%;
+  }
+  
+  .right-side {
+    width: 100%;
+  }
+ 
+}
+
+/* Media query for medium-sized screens (min-width: 769px and max-width: 1200px) */
+@media screen and (min-width: 800px) and (max-width: 1300px) {
+  
+  .container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    height: fit-content;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0.3px 0.4px 0.5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .left-side {
+    width: 400px;
+    max-height: 700px;
+    color: rgb(255, 255, 255);
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 7px;
+    overflow-x: auto;
+  }
+  
+  .center-side {
+    width: 500px;
+  }
+
+  .right-side {
+    width: 100%; /* Take full width */
+    
+  }
+
+  iframe {
+    width: 100%;
+  }
+}

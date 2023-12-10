@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sajilo Map</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+
+  
+
+
+      <div class="left-side">
+        <div class="search">
+          <input
+            id="search"
+            type="search"
+            placeholder="Search Here..."
+          />
+        </div>
+
+        <div id="tags" class="tags"></div>
+        <div id="main">
+          <!-- show whole arraylist Here -->
+        </div>
+
+        <p id="no-data" class="no-data">No data Available</p>
+      </div>
+
+      <div class="center-side">
+        <div class="map" id="map">
+          <!-- //default map kl tower-->
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3531.966536044052!2d85.34741487546773!3d27.718319476176266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19635470597b%3A0x33913fefbf2adcaf!2sKL%20Tower!5e0!3m2!1sen!2snp!4v1701937747167!5m2!1sen!2snp"
+            width="625"
+            height="700"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+
+      <div id="details" class="right-side">
+    
+      </div>
+    </div>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
