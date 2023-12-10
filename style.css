@@ -250,7 +250,7 @@ a:hover{
 
 .right-side .photos img{
   width: 130px;
-  height: fit-content;
+  height: auto;
 }
 
 .right-side .title-photo p{
