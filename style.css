@@ -249,8 +249,8 @@ a:hover{
 }
 
 .right-side .photos img{
-  width: 130px;
-  height: 30px;
+ width: 100px;
+  height: auto;
 }
 
 .right-side .title-photo p{
