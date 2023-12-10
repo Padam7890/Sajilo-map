@@ -191,8 +191,8 @@ let arrayList = [
       Website: "https://www.radissonhotels.com/en-us/hotels/radisson-kathmandu?cid=a:se+b:gmb+c:apac+i:local+e:rad+d:row+h:NPKTM1",
       Share:"https://maps.app.goo.gl/4EoQyeWigHARc9YMA",
       image: [
-        { src: "./images/radisson/radison0.jpg" },
-        { src: "./images/radisson/radison1.jpg" },
+        { src: "./images/Radisson/radison0.jpg" },
+        { src: "./images/Radisson/radison1.jpg" },
 
         ],
     },
