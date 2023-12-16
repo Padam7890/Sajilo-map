@@ -18,4 +18,4 @@ Photos and videos for each location.
 e) Responsive Design: The application is designed to be responsive for both mobile and tablet devices."
 
 
-website: https://padam7890.github.io/map-embeded/
+website: https://padam7890.github.io/Sajilo-map/
